@@ -1,6 +1,9 @@
 # Interactive Brokers Data Streaming
 This is BetaZero Capital's code to stream market data into a local database. IBKR's API does not limit the number of data lines IBKR sends to a user per second.
 
+# BetaZero Capital Code Structure
+This component is part of a much larger automated trading engine. This code pulls data from IBKR into a local database for use in automated trading. More specifically, the program receives trade, quote, and fundamental data from IBKR and subsequently saves the data to a local database. The program also checks for inconsistencies and corrects any errors or gaps in IBKR data.
+
 # IBKR API
 IBKR's main program is a trading platform called Trader Workstation (TWS). Any IBKR user can use TWS to trade on the financial markets. TWS controls user authentication and connecting to IBKR's servers to provide financial data that a user is subscribed to. IBKR provides an API for 3rd party software to access financial data and IBKR services. IBKR provides another program called IB Gateway for its API to connect to and handle user authentication. IB Gateway is a stripped down version of TWS that does not have any GUI for trading and only handles user authentication and connecting to IBKR's servers.
 ### Documentation and Error Codes

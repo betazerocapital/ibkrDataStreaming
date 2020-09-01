@@ -21,7 +21,7 @@ make
 ```
 ### Changing Parameters
 #### Port Number
-IB Gateway uses a specific port (Live Trading - 4001, Paper Trading - 4002) to communicate with any programming using the API. This is designated in the Main.cpp file and can be changed to whatever IB Gateway is set to use in the IB Gateway settings.
+IB Gateway uses a specific port (Live Trading - 4001, Paper Trading - 4002) to communicate with any programming using the API. [Never run the API in development on a Live Trading port or account. The reason for this is straightforward: to not lose money via accidental trades.] This is designated in the Main.cpp file and can be changed to whatever IB Gateway is set to use in the IB Gateway settings.
 
 #### Function
 In the file TestCppClient.cpp, `m_state` is determines what functionality the C++ sample will showcase. `m_state` is determined in the `TestCppClient::nextValidId(OrderId orderId)` function.

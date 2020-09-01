@@ -13,10 +13,13 @@ This repository includes the IBKR API and the samples that come along with them.
 3. An IB account
 
 ## Running a Simple Example
-With the requirements above, to run a C++ sample, follow these instructions:
+To compile the sample code, run the following:
 ```
 cd IBJts/samples/Cpp/TestCppClient/
 make
+```
+To run the program:
+```
 ./TestCppClient
 ```
 ### Changing Parameters
@@ -25,3 +28,20 @@ IB Gateway uses a specific port (Live Trading - 4001, Paper Trading - 4002) to c
 
 #### Function
 In the file TestCppClient.cpp, `m_state` is determines what functionality the C++ sample will showcase. `m_state` is determined in the `TestCppClient::nextValidId(OrderId orderId)` function.
+
+
+# Data Streaming and Storing
+The main purpose of this program is to stream financial data (trades, prices, and fundamental) into a local database for use in an automated trading environment.
+
+# TODO:
+1. Data: Research best and easiest way to store financial data.
+2. Data: Implement a program to stream financial data from IBKR API
+3. Data: Create a database(s) to store financial data (time series, fundamental, etc.)
+4. Execution: Create a program to submit orders given a target portfolio.
+5. Optional: Create a dashboard to monitor and control all programs.
+6. Optional: Determine how to use LIMIT orders to minimize cost.
+7. Optional: Look into stop loss orders.
+8. Optional: Look into manual routing instead of using IBKR SMART routing.
+
+# Execution
+We will start with the simplest target portfolio technique: find the difference between the target and current portfolios and submit MARKET orders to correct for difference.

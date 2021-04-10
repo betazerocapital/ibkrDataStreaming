@@ -1,7 +1,7 @@
 # Interactive Brokers Data Streaming
-This is BetaZero Capital's code to stream market data into a local database. IBKR's API does not limit the number of data lines IBKR sends to a user per second.
+This is the JHU Quant Trading Teams's code to stream market data into a local database. IBKR's API does not limit the number of data lines IBKR sends to a user per second.
 
-# BetaZero Capital Code Structure
+# Code Structure
 This component is part of a much larger automated trading engine. This code pulls data from IBKR into a local database for use in automated trading. More specifically, the program receives trade, quote, and fundamental data from IBKR and subsequently saves the data to a local database. The program also checks for inconsistencies and corrects any errors or gaps in IBKR data.
 
 # IBKR API
